@@ -7,8 +7,8 @@ import { getFilmBySlug } from "@/lib/films";
 import { VideoPlayer } from "@/components/VideoPlayer";
 import { use } from "react";
 
-export default function FilmDetailPage({ params }: { params: Promise<{ slug: string }> | { slug: string } }) {
-  const resolvedParams = "then" in params ? use(params) : params;
+export default function FilmDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = use(params);
   const film = getFilmBySlug(resolvedParams.slug);
   const [activeMedia, setActiveMedia] = useState<"feature" | "trailer" | null>(null);
 

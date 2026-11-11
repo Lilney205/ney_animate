@@ -32,6 +32,7 @@ export const films: Film[] = [
     duration: "1h 54m",
     rating: "PG-13",
     access: "free",
+    status: "published",
     featured: true,
     trailer: "The city is still breathing.",
     posterStyle:
@@ -51,6 +52,7 @@ export const films: Film[] = [
     duration: "2h 06m",
     rating: "PG",
     access: "free",
+    status: "published",
     trailer: "The throne remembers every oath.",
     posterStyle:
       "linear-gradient(135deg, rgba(120,53,15,0.9), rgba(15,23,42,0.2)), linear-gradient(135deg, #1c1917 0%, #7c2d12 40%, #f59e0b 100%)",
@@ -69,6 +71,7 @@ export const films: Film[] = [
     duration: "1h 41m",
     rating: "TV-14",
     access: "premium",
+    status: "published",
     featured: true,
     trailer: "The city hums when no one is listening.",
     posterStyle:
@@ -88,6 +91,7 @@ export const films: Film[] = [
     duration: "1h 38m",
     rating: "PG-13",
     access: "free",
+    status: "published",
     trailer: "Every signal hides a memory.",
     posterStyle:
       "linear-gradient(135deg, rgba(10,92,100,0.9), rgba(15,23,42,0.2)), linear-gradient(135deg, #082f49 0%, #0f766e 50%, #67e8f9 100%)",
@@ -106,6 +110,7 @@ export const films: Film[] = [
     duration: "1h 26m",
     rating: "G",
     access: "free",
+    status: "published",
     trailer: "Dreams don’t need daylight to grow.",
     posterStyle:
       "linear-gradient(135deg, rgba(30,41,59,0.85), rgba(15,23,42,0.1)), linear-gradient(135deg, #111827 0%, #334155 50%, #2dd4bf 100%)",
@@ -124,6 +129,7 @@ export const films: Film[] = [
     duration: "2h 18m",
     rating: "PG-13",
     access: "premium",
+    status: "published",
     trailer: "Rebuild the sky. Rewrite the future.",
     posterStyle:
       "linear-gradient(135deg, rgba(127,29,29,0.88), rgba(15,23,42,0.18)), linear-gradient(135deg, #0f172a 0%, #7f1d1d 42%, #fca5a5 100%)",
