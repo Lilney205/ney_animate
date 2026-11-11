@@ -1,13 +1,26 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, use, useState } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getFilmBySlug } from "@/lib/films";
 import { VideoPlayer } from "@/components/VideoPlayer";
-import { use } from "react";
 
 export default function FilmDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  return (
+    <Suspense
+      fallback={
+        <main className="mx-auto max-w-6xl px-6 py-10 lg:px-10">
+          <p className="text-slate-300">Loading film...</p>
+        </main>
+      }
+    >
+      <FilmDetailContent params={params} />
+    </Suspense>
+  );
+}
+
+function FilmDetailContent({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = use(params);
   const film = getFilmBySlug(resolvedParams.slug);
   const [activeMedia, setActiveMedia] = useState<"feature" | "trailer" | null>(null);
